@@ -1,0 +1,541 @@
+.navbar{
+    padding: 20px;
+    .container-fluid{
+      
+        .collapse{
+            .navbar-nav{
+               .nav-item{
+                   .nav-link{
+                       position: relative;
+                     &:hover{
+                        color: aqua;
+                     }  
+                       
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: 28px;
+                        bottom: -3px;
+                        background-color: aqua;
+                        height: 2px;
+                        width: 0%;
+                        transition: 0.5s;
+                    }
+                    &:hover:before{
+                        content: "";
+                        position: absolute;
+                        left: 8px;
+                        bottom: -3px;
+                        background-color: aqua;
+                        height: 2px;
+                        width: 80%;
+
+                    }
+                   }
+
+               } 
+            }
+        }
+    }
+}
+@media only screen and (min-width: 900px) {
+    .dropdown:hover{
+        .dropdown-menu{
+            display: block;
+        }
+    }
+  }
+//   start hero
+#hero{
+    margin-top: 35px;
+    .container{
+        .row{
+            .col-12{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 50%;
+                }
+                .text{
+                    text-align: center;
+                    h1{
+                        font-size: 45px;
+                        span{
+                            color: #1ec3e0;;
+                        }
+                    }
+                    p{
+                        font-size: 22px;
+                    }
+                    .button{
+                       
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        button{
+                            background-color: #1ec3e0 !important;
+                            border: none;
+                            padding: 8px 18px;
+                        }
+                        .play-button{
+                            display: flex;
+                            margin-left: 42px;
+                            position: relative;
+                            a{
+                                text-decoration: none;
+                                color: #1ec3e0;
+                                i{
+                                    position: absolute;
+                                    top: 4px;
+                                    left: -22px;
+                                    font-size: 25px;
+                                }
+                                p{
+                                    margin: 0;
+                                    color: black;
+                                }
+                            }
+                           
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+// end hero 
+// start card
+#cards{
+    margin-top: 50px;
+    .container{
+        .row{
+            display: flex;
+            justify-content: space-around;
+            .card-icon{
+                padding: 20px;
+                i{
+                    font-size: 35px;
+                    color: #1ec3e0;
+                }
+                h3{
+                    margin-top: 15px;
+                    a{
+                        
+                        text-decoration: none;
+                        color: black;
+                        transition: 0.5s;
+                    }
+                }
+                p{
+                    margin-top: 15px;
+                    width: 80%;
+                }
+                transition: 0.5s;
+            }
+            .card-icon:hover{
+                box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+                transform: translate(0px,-15px);
+                a{
+                    color:#1ec3e0;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 980px) {
+    .card-icon{
+        width: 23.5%;
+    }
+  }
+@media only screen and (min-width: 760px) and (max-width: 979px) {
+    .card-icon{
+        width: 48.5%;
+        margin-top: 25px;
+    }
+  }
+@media only screen and (max-width: 759px)  {
+    .card-icon{
+
+        margin-top: 25px;
+    }
+  }
+
+// end card
+// start about
+#about{
+    padding: 30px;
+    margin-top: 40px;
+    .container{
+        .row{
+           .text-head{
+               text-align: center;
+               p{
+                   margin-top: 20px !important;
+                   font-size: 17px;
+                   width: 80%;
+                   margin: 0 auto;
+               }
+           } 
+           .image-footer{
+               margin-top: 55px;
+               padding: 20px;
+               margin-left: 25px;
+               .image-text{
+                   .row{
+                       .image{
+                           img{
+                               width: 85%;
+                               float: right;
+                           }
+                        
+                       }
+                       .text{
+                           h2{
+                               width: 80%;
+                           }
+                       }
+                   }
+               }
+           }
+        }
+    }
+}
+@media only screen and (max-width: 1000px)  {
+    .image-footer{
+        .text{
+            margin-top: 40px;
+        }
+    }
+  }
+.tab {
+    overflow: hidden;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+
+    button{
+        font-size: 22px !important;
+    }
+    border-bottom: 2px solid grey;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 0px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    color:#0ea2bd;
+    position: relative;
+    transition: 0.5s;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: #0ea2bd;
+        z-index: 999;
+    }
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    margin-top: 20px;
+    h4{
+        margin-top: 15px;
+        font-size: 20px;
+        i{
+            color: #0ea2bd;
+        }
+    }
+    
+  }
+// end about
+// start team
+#team{
+    margin-top: 50px;
+    padding: 30px;
+    .container{
+        .row{
+            .text{
+                text-align: center;
+                p{
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-top: 30px;
+                }
+            }
+            .team-image{
+                margin-top: 45px;
+                
+                .row{
+                    .card-image{
+                        position: relative;
+                        &:hover{
+                            .icons{
+                                opacity: 1;
+                            }
+                        }
+                        img{
+                            width: 100%;
+                            border-radius: 2%;
+                        }
+                        .text-team{
+                            padding: 25px !important;
+                            text-align: center;
+                            width: 80%;
+                            position: absolute;
+                            bottom: -43px;
+                            left: 10%;
+                            p{
+                                margin: 0;
+                            }
+                            h4{
+                                margin: 0;
+                            }
+                            
+                        }
+                        .icons{
+                            position: absolute;
+                            bottom: 45px;
+                            left: 29%;
+                            opacity: 0;
+                            transition: 0.5s;
+                            a{
+                                padding: 5px 8px;
+                                background-color:#0ea2bd;
+                                border: 1px solid #0ea2bd;
+                                border-radius: 50%;
+                                color: white;
+                                margin: 5px;
+                                i{
+                                    font-size: 15px;
+
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 930px)  {
+    .team-image{
+        .row{
+            .card-3{
+                margin-top: 60px;
+            }
+        }
+    }
+  }
+
+  @media only screen and (max-width: 767px)  {
+    .team-image{
+        .row{
+            .card-image{
+                margin-top: 60px;
+            }
+        }
+    }
+  }
+// end team
+// start blog
+#blog{
+    margin-top: 40px;
+    .container{
+        .row{
+            .text{
+                text-align: center;
+                p{
+                    font-size: 18px;
+                }
+            }
+            .image{
+                .row{
+                    a{
+                        text-decoration: none;
+                       
+                    }
+
+                }
+            }
+        }
+    }
+    .card-image{
+        .image-container{
+            overflow: hidden;
+            border-radius: 2%;
+            img{
+                width: 100%;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &:hover{
+            h4{
+                color:#0ea2bd;
+            }
+            
+        }
+    }
+    h4{
+        transition: 0.5s;
+        color: rgba(0, 0, 0, 0.959);
+       
+    }
+    .desc{
+        color: black;
+        opacity: 0.8;
+    }
+    
+    
+} 
+// end blog
+
+// start map
+#map{
+    margin-top: 45px;
+    .container{
+        .row{
+            .text{
+                text-align: center;
+                p{
+                    margin-top: 20px;
+                }
+            }
+            .map{
+                padding: 20px;
+                iframe{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .map{
+padding: 22px 0;
+        iframe{
+            width: 100%;
+            height: 400px;
+        }
+    }
+}
+// end map
+// start form
+#form{
+    .container{
+        .row{
+            .left-side{
+                .location-form{
+                    margin: 0 !important;
+                    padding:20px 35px!important;
+                    p{
+                        color: rgba(0, 0, 0, 0.644);
+                    }
+                    .icons{
+                        margin-top: 35px;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.096);
+                        i{
+                            font-size: 28px;
+                            color: #0ea2bd;
+                            margin-right: 10px;
+                            margin-bottom: 20px;
+                        }
+                        .icons-text{
+                            margin-bottom: 20px;
+                            h5{
+                                margin: 0;
+                                font-size: 19px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            .right-side{
+                .forms{
+                    .row{
+                        form{
+                            .head-input{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                .col-6{
+                                    width: 48%;
+                                    input{
+                                    padding: 10px;
+                                    }
+                                }
+                            }
+                            .subject-input{
+                                margin-top: 20px !important;
+                                width:98% ;
+                                margin: 0 auto;
+                                input{
+                                    padding: 10px;
+                                }
+                            }
+                            .message{
+                                margin-top: 25px !important;
+                                
+                                margin: 0 auto;
+                                textarea{
+                                    width:98%;
+                                    padding: 10px 12px;
+                                    margin: 0px 6px !important;
+                                    
+                                }
+                            }
+                            .btn{
+                                width: 100%;
+                                margin: 0 auto;
+                                .form-btn{
+                                
+                                    margin-top:35px;
+                                    border: none;
+                                    background-color: #0ea2bd;
+                                    padding: 10px 25px;
+                                    color: white;
+                                    transition: 0.5s;
+                                    &:hover{
+                                        opacity: 0.8;
+                                    }
+                                }
+                            }
+                            
+
+
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+// end form
